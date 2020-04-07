@@ -3,7 +3,6 @@
 #You should pip install pygame if it's not in your system
 #Enjoy
 
-
 import math
 import random
 import pygame
