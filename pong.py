@@ -121,14 +121,14 @@ while True:
         os.system("aplay bounce.wav&")
 
     # Paddle and ball collisions
-    if (ball.xcor() > 340 and ball.xcor() < 350) and (
-            ball.ycor() < paddle_b.ycor() + 40 and ball.ycor() > paddle_b.ycor() - 40):
+    if (340 < ball.xcor() < 350) and (
+            paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
         ball.setx(340)
         ball.dx *= -1
         os.system("aplay bounce.wav&")
 
-    if (ball.xcor() < -340 and ball.xcor() > -350) and (
-            ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
+    if (-340 > ball.xcor() > -350) and (
+            paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
         os.system("aplay bounce.wav&")
